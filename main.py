@@ -11,6 +11,8 @@ load_dotenv()  # 加载 .env 文件中的环境变量
 api_id = os.getenv("API_ID")
 api_hash = os.getenv("API_HASH")
 
+print(api_id,api_hash)
+
 
 client = TelegramClient('session', api_id, api_hash)
 
