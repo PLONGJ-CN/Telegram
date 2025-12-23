@@ -34,7 +34,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Checkin
       env:
-        API_HASH: ${{ secrets.API_ID }}
+        API_HASH: ${{ secrets.API_HASH }}
         APP_ID: ${{ secrets.API_ID }}
       run: |
         python ./main.py
