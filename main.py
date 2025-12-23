@@ -17,7 +17,7 @@ print(api_id,api_hash)
 client = TelegramClient('session', api_id, api_hash)
 
 async def main():
-    await client.start(phone='+8613500240929')
+    # await client.start(phone='')
 
     await client.send_message('@sttlink_bot','/checkin')
 
