@@ -9,23 +9,14 @@ on:
 
 jobs:
   build-linux:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Add conda to system path
-      run: |
-        # $CONDA 是一个指向 Miniconda 根目录的环境变量
-        echo $CONDA/bin >> $GITHUB_PATH
-
-    - name: Install pip via conda
-      run: conda install pip
-      
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v2
+    - name: Set up Python 3.8.16
+      uses: actions/setup-python@v4
       with:
-        python-version: 3.11
+        python-version: 3.8.16
     - name: Add conda to system path
       run: |
         # $CONDA is an environment variable pointing to the root of the miniconda directory
