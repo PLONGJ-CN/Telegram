@@ -25,7 +25,7 @@ jobs:
         shell: bash -el {0}             # 关键：以登录 shell 运行，确保 conda 已初始化
         run: |
           conda install pip
-          pip install telethon
+          pip install telethon python-dotenv
 
       - name: Lint with flake8
         shell: bash -el {0}
